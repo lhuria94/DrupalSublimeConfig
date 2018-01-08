@@ -2,5 +2,9 @@
   {
     "caption": "Install Drupal Compatible Configuration",
     "command": "drupal_sublime_config",
+  },
+  {
+    "caption": "Get FC Sample test steps template",
+    "command": "fc_sample_test_steps_template",
   }
 ]
