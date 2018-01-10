@@ -25,12 +25,17 @@ class FcSampleTestStepsTemplate(sublime_plugin.TextCommand):
       content = f.read()
       self.view.insert(edit, 0, content)
 
-class DownloadStuff(sublime_plugin.TextCommand):
+class DownloadLinters(sublime_plugin.TextCommand):
   def run(self, edit):
+    # PHPcs linter path
     phpcs_url = 'https://github.com/benmatselby/sublime-phpcs/archive/master.zip'
+    # Download files from internet resources
     urllib.request.urlretrieve(phpcs_url, packages_path + '/Phpcs.zip')
-    if os.path.isfile(packages_path + '/Phpcs1.zip'):
+    # Check if file exists
+    if os.path.isfile(packages_path + '/Phpcs.zip'):
       zf = ZipFile(packages_path + '/Phpcs.zip')
       zf.extractall(packages_path)
       zf.close()
+      # Remove file after finishing operations
       os.remove(packages_path + '/Phpcs.zip')
+      os.rename(packages_path + '/sublime-phpcs-master', packages_path + '/Phpcs')

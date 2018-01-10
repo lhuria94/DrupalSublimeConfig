@@ -8,7 +8,7 @@
     "command": "fc_sample_test_steps_template",
   },
   {
-    "caption": "Download stuff",
-    "command": "download_stuff",
+    "caption": "Download Linters",
+    "command": "download_linters",
   }
 ]
