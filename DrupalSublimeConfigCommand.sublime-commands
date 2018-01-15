@@ -4,8 +4,8 @@
     "command": "drupal_sublime_config",
   },
   {
-    "caption": "Get FC Sample test steps template",
-    "command": "fc_sample_test_steps_template",
+    "caption": "Get Sample test steps template",
+    "command": "sample_test_steps_template",
   },
   {
     "caption": "Download Linters",

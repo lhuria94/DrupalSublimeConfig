@@ -23,7 +23,7 @@ class DrupalSublimeConfigCommand(sublime_plugin.TextCommand):
         for line in f:
           f1.write(line)
 
-class FcSampleTestStepsTemplate(sublime_plugin.TextCommand):
+class SampleTestStepsTemplate(sublime_plugin.TextCommand):
   def run(self, edit):
     with open((packages_path) + "/DrupalSublimeConfig/SampleTestStepsTemplate.txt", 'r', encoding=enc) as f:
       content = f.read()
