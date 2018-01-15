@@ -11,18 +11,10 @@ packages_path = sublime.packages_path()
 
 class DrupalSublimeConfigCommand(sublime_plugin.TextCommand):
   def run(self, edit):
-    # PHPcs linter path
+    # Material theme path
     mat_url = 'https://github.com/equinusocio/material-theme/archive/master.zip'
-    # Download files from internet resources
-    urllib.request.urlretrieve(mat_url, packages_path + '/Material Theme.zip')
-    # Check if file exists
-    if os.path.isfile(packages_path + '/Material Theme.zip'):
-      zf = ZipFile(packages_path + '/Material Theme.zip')
-      zf.extractall(packages_path)
-      zf.close()
-      # Remove file after finishing operations
-      os.remove(packages_path + '/Material Theme.zip')
-      os.rename(packages_path + '/material-theme-master', packages_path + '/Material Theme')
+    # Access different class method
+    DownloadLinters._downloadInternetResources(mat_url, 'material-theme-master', 'Material Theme')
 
     # Copying drupal compatible config to Sublime user settings
     # Ref: https://www.drupal.org/docs/develop/development-tools/configuring-sublime-text
@@ -43,7 +35,7 @@ class DownloadLinters(sublime_plugin.TextCommand):
     phpcs_url = 'https://github.com/benmatselby/sublime-phpcs/archive/master.zip'
     self._downloadInternetResources(phpcs_url, 'sublime-phpcs-master', 'Phpcs')
 
-  def _downloadInternetResources(self, path, folderName, replacement):
+  def _downloadInternetResources(path, folderName, replacement):
     # Download files from internet resources
     urllib.request.urlretrieve(path, packages_path + '/' + replacement + '.zip')
 
