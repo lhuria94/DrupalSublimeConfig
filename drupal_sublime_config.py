@@ -14,7 +14,7 @@ class DrupalSublimeConfigCommand(sublime_plugin.TextCommand):
     # Material theme path
     mat_url = 'https://github.com/equinusocio/material-theme/archive/master.zip'
     # Access different class method
-    DownloadLinters._downloadInternetResources(mat_url, 'material-theme-master', 'Material Theme')
+    DownloadLinters._downloadInternetResources(self, mat_url, 'material-theme-master', 'Material Theme')
 
     # Copying drupal compatible config to Sublime user settings
     # Ref: https://www.drupal.org/docs/develop/development-tools/configuring-sublime-text
@@ -33,9 +33,12 @@ class DownloadLinters(sublime_plugin.TextCommand):
   def run(self, edit):
     # PHPcs linter path
     phpcs_url = 'https://github.com/benmatselby/sublime-phpcs/archive/master.zip'
+    # ESLint linter path
+    eslint_url = 'https://github.com/polygonplanet/sublime-text-eslint/archive/master.zip'
     self._downloadInternetResources(phpcs_url, 'sublime-phpcs-master', 'Phpcs')
+    self._downloadInternetResources(eslint_url, 'sublime-text-eslint-master', 'ESLint')
 
-  def _downloadInternetResources(path, folderName, replacement):
+  def _downloadInternetResources(self, path, folderName, replacement):
     # Download files from internet resources
     urllib.request.urlretrieve(path, packages_path + '/' + replacement + '.zip')
 

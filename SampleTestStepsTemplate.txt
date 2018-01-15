@@ -1,50 +1,23 @@
-(Sample Intro about your ticket) This ticket is about building star rating pane needs which need to build for the sticky price mini panel on holiday and accommodation product pages. However, the pane will be available for all type of products to use.
+(Sample Intro about your ticket)
 
-* (Some background) This ticket adds background image on product pages, background image are drupal image files tagged with tag like backgroundimage-<tag>. You can access drupal image files at http://acquiastage.travel-associates.com.au/admin/content/file
-* (Step) Product page background image follows below logic and hierarchy:
-** (Sub-step) If image with backgroundimage-<destination> exists then this file should be used as background image.
-** (Sub-step) If image with backgroundimage-<coutnry> exists then this file should be used as background image.
-** (Sub-step) If image with backgroundimage-<continent> exists then this file should be used as background image.
-** (Sub-step) If image with backgroundimage-<category> exists then this file should be used as background image.
-** (Sub-step) If no images available with above tag then default black world map should be used as background image on all products except cruise products. On cruise products if no images available with above tag then no image should be displayed.
-* (Give sample examples) For example if you go to product http://acquiastage.travel-associates.com.au/cruises/europe/3992909 and inspect dataLayer, then dataLayer should show:
-Product Destination:"Europe"
-Product Country:""
-Product Continent:""
-Product Category:"Cruise"
-* (Some more urls if you have) Verify same for all the products, below are few product urls, you can see more products from
-http://acquiastage.travel-associates.com.au/admin/content/fcl_procat_products and applying "Categories" filter.
-Normal product examples:
-http://acquiastage.travel-associates.com.au/accommodation/tahiti/3403995
-http://acquiastage.travel-associates.com.au/flights/singapore/2426622
+* Pointer 1
+* Pointer 2
+** Sub Pointer 2.1
+** Sub Pointer 2.2
+** Sub Pointer 2.3
 
-Non-travel tek product examples:
-http://acquiastage.travel-associates.com.au/cruises/europe/3992909
-http://acquiastage.travel-associates.com.au/cruises/caribbean/3918527
-The new banner image should bet place between the menu and the grey box at the top of the page.
-
-Travel Tek examples:
-http://acquiastage.travel-associates.com.au/product/3935139
-http://acquiastage.travel-associates.com.au/product/3941453
-http://acquiastage.travel-associates.com.au/cruises/alaska/3933157
-
-Holiday packages:
-http://acquiastage.travel-associates.com.au/holiday-packages/los-angeles/3975401
-
-Cruise products:
-http://acquiastage.travel-associates.com.au/cruises/alaska/3933157
-
-* (Front end related testing) Verify that on mobile devices if there is banner image then banner height should not be more then 200px.
+Reference URLs:
+http://blah
+http://blah
 
 (Tell if regression is required) Regression Testing
 -------------------------
-1. This feature should not affect TANZ  http://acquiadev.travel-associates.com.nz and TA USA  http://acquiadev.travel-associates.us website.
-2. Go to different product pages on NZ and USA website and verify that banner images on product pages is same as production. !save-panelizer.png|thumbnail!
+1. Regression point 1
+1. Regression point 2
 
 (Some extra note if you want to add) 
-*Note:* I have done this manual configuration for [http://admin.travel-associates.com.au/cruises/cruise-lines/seabourn] on Acquiadev environment.
+*Note:* I have done this manual configuration for blah blah.
 
-
-Reference:
-https://jira.au.flitech.net/browse/TAAU-1114
-https://jira.au.flitech.net/browse/TAAU-1131
+Any Reference ticket you might have:
+* Ticket URL 1
+* Ticket URL 2
